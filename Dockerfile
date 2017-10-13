@@ -1,6 +1,6 @@
 FROM anapsix/alpine-java:8_server-jre
 
-ENV H2_URL http://www.h2database.com/h2-2017-04-23.zip
+ENV H2_URL https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/h2database/h2-2013-07-28.zip
 ENV VERSION 0.1
 ENV APPROOT /tmp/h2/bin
 
@@ -17,7 +17,5 @@ RUN wget $H2_URL -O /tmp/h2.zip && \
 	cd /tmp && \
 	unzip -qq h2.zip 
 	
-RUN echo $PATH
-	
-CMD ["java", "-jar", "/tmp/h2/bin/h2-1.4.195.jar", "-webAllowOthers", "-tcpAllowOthers"]
+CMD ["java", "-jar", "/tmp/h2/bin/h2-1.3.173.jar", "-webAllowOthers", "-tcpAllowOthers"]
 
