@@ -1,6 +1,6 @@
 FROM anapsix/alpine-java:8_server-jre
 
-ENV H2_URL https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/h2database/h2-2013-07-28.zip
+ENV H2_URL http://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/h2database/h2-2013-07-28.zip
 ENV VERSION 0.1
 ENV APPROOT /tmp/h2/bin
 
